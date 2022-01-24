@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> notepad </title>
+    <header>
+        <ul>
+            <li><a target="_blank" href="../../todolist/todolist.HTML">todolist</a></li>
+            <li><a target="_blank" href="../../notepad/templates/notepad.html">notepad</a></li>
+            <li><a target="_blank" href="../../main/templates/index.html">home</a></li>
+            <li><a target="_blank" href="../../forum/templates/forum.html">forum</a></li>
+        </ul>
+    </header>
+</head>
+
+<body onload="javascript:onloadbody();">
+    <link rel="stylesheet" href="notepadstyle.css">
+    <script src="notepad.js"></script>
+    <img src="downloads/logo.png" class="logo"></img>
+    <div class="main">
+        <div class="sidebar" id="sidebar">
+        </div>
+        <div class="editnotes">
+            <h1> Notepad, save all of your notes here</h1>
+            <div class="buttonbar">
+                <button type="button" onclick="makebold()" class="makebold" data-placement="top">Bold</button>
+                <button type="button" onclick="makeitalic()" class="italic" data-placement="top">Italic</button>
+                <button type="button" onclick="cleartext()" class="cleartext" data-placement="top">Clear Text</button>
+                <select id="fontsizedropdown" onchange="javascript:fontsizechange()" class="fontsize">
+                <option value='8'>8</option>
+                <option value='10'>10</option>
+                <option value='12'>12</option>
+                <option value='14'>14</option>
+                <option value='16'>16</option>
+                <option value='18'>18</option>
+                <option value='20'>20</option>
+                <option value='22'>22</option>
+                <option value='24' selected>24</option>
+                <option value='26'>26</option>
+                <option value='28'>28</option>
+                <option value='30'>30</option>
+                <option value='32'>32</option>
+                <option value='34'>34</option>
+                <option value='36'>36</option>
+                <option value='38'>38</option>
+                <option value='40'>40</option>
+                <option value='42'>42</option>
+                <option value='44'>44</option>
+                <option value='46'>46</option>
+                <option value='48'>48</option>
+                <option value='50'>50</option>
+            </select>
+                <select id="changefontdropdown" onchange="javascript:fontchange()" class="changefont">
+                <option value='Times New Roman'>Times New Roman</option>
+                <option value='Verdana'>Verdana</option>
+                <option value='Arial' selected>Arial</option>
+            </select>
+                <input type="text" id="subjectname" class="subjectname" placeholder="Name of subject"></input>
+                <button id="savenotes" class="savenotes" onclick="javascript:savenotes()">Save</button>
+                <button onclick="saveTextAsFile(notesarea.value,'notes.txt')">Download</button>
+                <textarea id="notesarea" class="mainnotesarea" placeholder="Write and manage your notes here"></textarea>
+                <br>
+            </div>
+
+        </div>
+
+
+
+
+
+</body>
+
+
+</html>
